@@ -35,12 +35,12 @@
 		795D32C01D38CBCC00002BB5 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		795D32C21D38CBD500002BB5 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		795D32C41D38CCD100002BB5 /* libSailsEngineSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSailsEngineSDK.a; path = ../../../libSailsEngineSDK.a; sourceTree = "<group>"; };
-		E1D035691A61CE2500EA8777 /* LocationRegion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationRegion.h; sourceTree = "<group>"; };
-		E1D0356A1A61CE2500EA8777 /* MarkerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkerManager.h; sourceTree = "<group>"; };
-		E1D0356B1A61CE2500EA8777 /* PathRoutingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathRoutingManager.h; sourceTree = "<group>"; };
-		E1D0356C1A61CE2500EA8777 /* PinMarkerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PinMarkerManager.h; sourceTree = "<group>"; };
-		E1D0356D1A61CE2500EA8777 /* Sails.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sails.h; sourceTree = "<group>"; };
-		E1D0356E1A61CE2500EA8777 /* SailsMapCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SailsMapCommon.h; sourceTree = "<group>"; };
+		E1D035691A61CE2500EA8777 /* LocationRegion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LocationRegion.h; path = SailsSDKDemo/include/LocationRegion.h; sourceTree = SOURCE_ROOT; };
+		E1D0356A1A61CE2500EA8777 /* MarkerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MarkerManager.h; path = SailsSDKDemo/include/MarkerManager.h; sourceTree = SOURCE_ROOT; };
+		E1D0356B1A61CE2500EA8777 /* PathRoutingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PathRoutingManager.h; path = SailsSDKDemo/include/PathRoutingManager.h; sourceTree = SOURCE_ROOT; };
+		E1D0356C1A61CE2500EA8777 /* PinMarkerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PinMarkerManager.h; path = SailsSDKDemo/include/PinMarkerManager.h; sourceTree = SOURCE_ROOT; };
+		E1D0356D1A61CE2500EA8777 /* Sails.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sails.h; path = SailsSDKDemo/include/Sails.h; sourceTree = SOURCE_ROOT; };
+		E1D0356E1A61CE2500EA8777 /* SailsMapCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SailsMapCommon.h; path = SailsSDKDemo/include/SailsMapCommon.h; sourceTree = SOURCE_ROOT; };
 		E1FCF422196A7D5100A5C4B9 /* SailsSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SailsSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1FCF42D196A7D5100A5C4B9 /* SailsSDKDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SailsSDKDemo-Info.plist"; sourceTree = "<group>"; };
 		E1FCF42F196A7D5100A5C4B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
