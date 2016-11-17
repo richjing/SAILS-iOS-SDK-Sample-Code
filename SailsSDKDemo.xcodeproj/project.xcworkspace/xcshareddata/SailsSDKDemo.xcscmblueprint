@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A8452A046E7DB3E900236A232E8E916FD6C51E80",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AFC21B9C3572315AA26B6FB3635B5723BE46282A" : 9223372036854775807,
+    "A8452A046E7DB3E900236A232E8E916FD6C51E80" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F959D02D-6740-49FD-9B4E-35C8C5EA3283",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AFC21B9C3572315AA26B6FB3635B5723BE46282A" : "..\/..\/Dropbox\/iOS\/Sails\/iOS_SAILS_SDK",
+    "A8452A046E7DB3E900236A232E8E916FD6C51E80" : "SailsSDKDemo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SailsSDKDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SailsSDKDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/richjing\/SAILS-iOS-SDK-Sample-Code.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A8452A046E7DB3E900236A232E8E916FD6C51E80"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/richjing\/SAILS-iOS-SDK.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AFC21B9C3572315AA26B6FB3635B5723BE46282A"
+    }
+  ]
+}

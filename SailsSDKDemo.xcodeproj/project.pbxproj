@@ -10,7 +10,7 @@
 		795D32531D38ADBB00002BB5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795D32521D38ADBB00002BB5 /* Launch Screen.storyboard */; };
 		795D32C11D38CBCC00002BB5 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 795D32C01D38CBCC00002BB5 /* libxml2.tbd */; };
 		795D32C31D38CBD500002BB5 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 795D32C21D38CBD500002BB5 /* libz.1.2.5.tbd */; };
-		795D32D71D38D83900002BB5 /* libSailsEngineSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 795D32D61D38D83900002BB5 /* libSailsEngineSDK.a */; };
+		799923C51DDD51A800E91D3C /* locating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799923C41DDD51A800E91D3C /* locating.framework */; };
 		E1FCF430196A7D5100A5C4B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1FCF42E196A7D5100A5C4B9 /* InfoPlist.strings */; };
 		E1FCF432196A7D5100A5C4B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FCF431196A7D5100A5C4B9 /* main.m */; };
 		E1FCF436196A7D5100A5C4B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FCF435196A7D5100A5C4B9 /* AppDelegate.m */; };
@@ -34,13 +34,7 @@
 		795D32521D38ADBB00002BB5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		795D32C01D38CBCC00002BB5 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		795D32C21D38CBD500002BB5 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
-		795D32D61D38D83900002BB5 /* libSailsEngineSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSailsEngineSDK.a; path = SailsSDKDemo/libSailsEngineSDK.a; sourceTree = SOURCE_ROOT; };
-		E1D035691A61CE2500EA8777 /* LocationRegion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LocationRegion.h; path = SailsSDKDemo/include/LocationRegion.h; sourceTree = SOURCE_ROOT; };
-		E1D0356A1A61CE2500EA8777 /* MarkerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MarkerManager.h; path = SailsSDKDemo/include/MarkerManager.h; sourceTree = SOURCE_ROOT; };
-		E1D0356B1A61CE2500EA8777 /* PathRoutingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PathRoutingManager.h; path = SailsSDKDemo/include/PathRoutingManager.h; sourceTree = SOURCE_ROOT; };
-		E1D0356C1A61CE2500EA8777 /* PinMarkerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PinMarkerManager.h; path = SailsSDKDemo/include/PinMarkerManager.h; sourceTree = SOURCE_ROOT; };
-		E1D0356D1A61CE2500EA8777 /* Sails.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sails.h; path = SailsSDKDemo/include/Sails.h; sourceTree = SOURCE_ROOT; };
-		E1D0356E1A61CE2500EA8777 /* SailsMapCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SailsMapCommon.h; path = SailsSDKDemo/include/SailsMapCommon.h; sourceTree = SOURCE_ROOT; };
+		799923C41DDD51A800E91D3C /* locating.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = locating.framework; path = SailsSDKDemo/locating.framework; sourceTree = "<group>"; };
 		E1FCF422196A7D5100A5C4B9 /* SailsSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SailsSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1FCF42D196A7D5100A5C4B9 /* SailsSDKDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SailsSDKDemo-Info.plist"; sourceTree = "<group>"; };
 		E1FCF42F196A7D5100A5C4B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -62,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				795D32D71D38D83900002BB5 /* libSailsEngineSDK.a in Frameworks */,
+				799923C51DDD51A800E91D3C /* locating.framework in Frameworks */,
 				795D32C31D38CBD500002BB5 /* libz.1.2.5.tbd in Frameworks */,
 				795D32C11D38CBCC00002BB5 /* libxml2.tbd in Frameworks */,
 			);
@@ -78,25 +72,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E17930F11993765F006525DE /* include */ = {
+		79EFDFC41DDD4FE400A2AB6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E1D035691A61CE2500EA8777 /* LocationRegion.h */,
-				E1D0356A1A61CE2500EA8777 /* MarkerManager.h */,
-				E1D0356B1A61CE2500EA8777 /* PathRoutingManager.h */,
-				E1D0356C1A61CE2500EA8777 /* PinMarkerManager.h */,
-				E1D0356D1A61CE2500EA8777 /* Sails.h */,
-				E1D0356E1A61CE2500EA8777 /* SailsMapCommon.h */,
 			);
-			path = include;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E1FCF419196A7D5100A5C4B9 = {
 			isa = PBXGroup;
 			children = (
+				799923C41DDD51A800E91D3C /* locating.framework */,
 				E1FCF42B196A7D5100A5C4B9 /* SailsSDKDemo */,
 				E1FCF444196A7D5100A5C4B9 /* SailsSDKDemoTests */,
 				E1FCF423196A7D5100A5C4B9 /* Products */,
+				79EFDFC41DDD4FE400A2AB6D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,7 +108,6 @@
 				E1FCF46B196A8CA800A5C4B9 /* MapViewController.m */,
 				E1FCF437196A7D5100A5C4B9 /* Images.xcassets */,
 				795D32521D38ADBB00002BB5 /* Launch Screen.storyboard */,
-				E17930F11993765F006525DE /* include */,
 				E1FCF467196A7FB900A5C4B9 /* lib */,
 				E1FCF42C196A7D5100A5C4B9 /* Supporting Files */,
 			);
@@ -159,7 +148,6 @@
 			children = (
 				795D32C21D38CBD500002BB5 /* libz.1.2.5.tbd */,
 				795D32C01D38CBCC00002BB5 /* libxml2.tbd */,
-				795D32D61D38D83900002BB5 /* libSailsEngineSDK.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -211,6 +199,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Robert.Hsueh;
 				TargetAttributes = {
+					E1FCF421196A7D5100A5C4B9 = {
+						DevelopmentTeam = 8QDRY8G548;
+					};
 					E1FCF43C196A7D5100A5C4B9 = {
 						TestTargetID = E1FCF421196A7D5100A5C4B9;
 					};
@@ -379,6 +370,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				DEVELOPMENT_TEAM = 8QDRY8G548;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SailsSDKDemo",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SailsSDKDemo/SailsSDKDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -388,6 +384,7 @@
 				);
 				INFOPLIST_FILE = "SailsSDKDemo/SailsSDKDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SailsSDKDemo/lib",
@@ -404,6 +401,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				DEVELOPMENT_TEAM = 8QDRY8G548;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SailsSDKDemo",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SailsSDKDemo/SailsSDKDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -413,6 +415,7 @@
 				);
 				INFOPLIST_FILE = "SailsSDKDemo/SailsSDKDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SailsSDKDemo/lib",

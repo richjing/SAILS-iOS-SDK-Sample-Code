@@ -7,12 +7,12 @@
 //
 
 #import "MapViewController.h"
-#import "Sails.h"
-#import "SailsMapCommon.h"
-#import "LocationRegion.h"
-#import "MarkerManager.h"
-#import "PinMarkerManager.h"
-#import "PathRoutingManager.h"
+#import <locating/Sails.h>
+#import <locating/SailsMapCommon.h>
+#import <locating/LocationRegion.h>
+#import <locating/MarkerManager.h>
+#import <locating/PathRoutingManager.h>
+#import <locating/PinMarkerManager.h>
 #import <AudioToolbox/AudioToolbox.h>
 
 typedef NS_ENUM(NSInteger, UIActionSheetMode) {
@@ -77,15 +77,15 @@ typedef NS_ENUM(NSInteger, UIActionSheetMode) {
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 
 #pragma mark - Initialization Method
@@ -99,11 +99,15 @@ typedef NS_ENUM(NSInteger, UIActionSheetMode) {
     
     //Create sails object
     sails = [[Sails alloc] init];
-    
+    [sails setMode:WITH_GPS];
     //set map view to sails object
     [sails setSailsLocationMapView:sailsMapView];
+    Paint *accuracyCirclePaint = [[Paint alloc] init];
+    accuracyCirclePaint.strokeColor = [UIColor colorWithRed:53/255.0 green:179/255.0 blue:229/255.0 alpha:0/255.0];
+    accuracyCirclePaint.fillColor = [UIColor colorWithRed:53/255.0 green:179/255.0 blue:229/255.0 alpha:0/255.0];
+    accuracyCirclePaint.strokeWidth = 0;
     
-    //get marker manager
+    [sailsMapView setLocationMarker:[UIImage imageNamed:@"myloc_arr"] arrowImage:[UIImage imageNamed:@"myloc_arr"] accuracyCirclePaint:accuracyCirclePaint iconFrame:100];    //get marker manager
     sailsMarkerManager = [sailsMapView getMarkerManager];
     //get pin marker manager
     sailsPinMarkerManager = [sailsMapView getPinMarkerManager];
@@ -117,12 +121,13 @@ typedef NS_ENUM(NSInteger, UIActionSheetMode) {
     __weak SailsLocationMapView *weakSailsMapView = sailsMapView;
     __weak MapViewController *weakSelf = self;
     
-    [sails loadCloudBuilding:@"bd10034e8a284673945c1497634087cc"
-                  buildingID:@"537db26eab5c03141300071e"
+    [sails loadCloudBuilding:@"e80fb977d5774a8b972c8e3f56b6b38d"
+                  buildingID:@"57f73cfc08920f6b4b000639"
                      success:^(void){
                          floorNameList = [sails getFloorNameList];
                          [weakSailsMapView loadFloorMap:[floorNameList firstObject]];
                          weakSelf.navigationItem.title = [sails getFloorDescription:[floorNameList firstObject]];
+                         [sails setGPSFloorLayer:[floorNameList lastObject]];
                          allLocationRegionOfFloors = [weakSelf getAllLocationRegionOfFloors];
                          [poiTableView reloadData];
                      }
@@ -189,8 +194,8 @@ typedef NS_ENUM(NSInteger, UIActionSheetMode) {
     stopRoutingButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [stopRoutingButton addTarget:self action:@selector(stopRoutingButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [stopRoutingButton setImage:[UIImage imageNamed:@"stop_icon"] forState:UIControlStateNormal];
-//    stopRoutingButton.frame = CGRectMake(0, 0, 36, 36);
-//    stopRoutingButton.center = CGPointMake(290, 84);
+    //    stopRoutingButton.frame = CGRectMake(0, 0, 36, 36);
+    //    stopRoutingButton.center = CGPointMake(290, 84);
     stopRoutingButton.frame = CGRectMake(0, 0, 42, 42);
     stopRoutingButton.center = CGPointMake(30, [UIScreen mainScreen].bounds.size.height*19/24);
     stopRoutingButton.tag = 2;
