@@ -10,7 +10,7 @@
 		795D32531D38ADBB00002BB5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795D32521D38ADBB00002BB5 /* Launch Screen.storyboard */; };
 		795D32C11D38CBCC00002BB5 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 795D32C01D38CBCC00002BB5 /* libxml2.tbd */; };
 		795D32C31D38CBD500002BB5 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 795D32C21D38CBD500002BB5 /* libz.1.2.5.tbd */; };
-		799923C51DDD51A800E91D3C /* locating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799923C41DDD51A800E91D3C /* locating.framework */; };
+		79D4F16D1F56E96B003C0063 /* locating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D4F1651F56E6B3003C0063 /* locating.framework */; };
 		E1FCF430196A7D5100A5C4B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1FCF42E196A7D5100A5C4B9 /* InfoPlist.strings */; };
 		E1FCF432196A7D5100A5C4B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FCF431196A7D5100A5C4B9 /* main.m */; };
 		E1FCF436196A7D5100A5C4B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FCF435196A7D5100A5C4B9 /* AppDelegate.m */; };
@@ -34,7 +34,7 @@
 		795D32521D38ADBB00002BB5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		795D32C01D38CBCC00002BB5 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		795D32C21D38CBD500002BB5 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
-		799923C41DDD51A800E91D3C /* locating.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = locating.framework; path = SailsSDKDemo/locating.framework; sourceTree = "<group>"; };
+		79D4F1651F56E6B3003C0063 /* locating.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = locating.framework; sourceTree = "<group>"; };
 		E1FCF422196A7D5100A5C4B9 /* SailsSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SailsSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1FCF42D196A7D5100A5C4B9 /* SailsSDKDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SailsSDKDemo-Info.plist"; sourceTree = "<group>"; };
 		E1FCF42F196A7D5100A5C4B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -56,9 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				799923C51DDD51A800E91D3C /* locating.framework in Frameworks */,
 				795D32C31D38CBD500002BB5 /* libz.1.2.5.tbd in Frameworks */,
 				795D32C11D38CBCC00002BB5 /* libxml2.tbd in Frameworks */,
+				79D4F16D1F56E96B003C0063 /* locating.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +75,7 @@
 		79EFDFC41DDD4FE400A2AB6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79D4F1651F56E6B3003C0063 /* locating.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -82,7 +83,6 @@
 		E1FCF419196A7D5100A5C4B9 = {
 			isa = PBXGroup;
 			children = (
-				799923C41DDD51A800E91D3C /* locating.framework */,
 				E1FCF42B196A7D5100A5C4B9 /* SailsSDKDemo */,
 				E1FCF444196A7D5100A5C4B9 /* SailsSDKDemoTests */,
 				E1FCF423196A7D5100A5C4B9 /* Products */,
@@ -374,6 +374,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SailsSDKDemo",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SailsSDKDemo/SailsSDKDemo-Prefix.pch";
@@ -405,6 +406,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SailsSDKDemo",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SailsSDKDemo/SailsSDKDemo-Prefix.pch";
