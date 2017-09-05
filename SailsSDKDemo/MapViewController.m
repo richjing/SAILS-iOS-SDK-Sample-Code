@@ -107,7 +107,7 @@ typedef NS_ENUM(NSInteger, UIActionSheetMode) {
     accuracyCirclePaint.fillColor = [UIColor colorWithRed:53/255.0 green:179/255.0 blue:229/255.0 alpha:0/255.0];
     accuracyCirclePaint.strokeWidth = 0;
     
-    [sailsMapView setLocationMarker:[UIImage imageNamed:@"myloc_arr"] arrowImage:[UIImage imageNamed:@"myloc_arr"] accuracyCirclePaint:accuracyCirclePaint iconFrame:100];    //get marker manager
+    [sailsMapView setLocationMarker:[UIImage imageNamed:@"myloc_arr"] arrowImage:[UIImage imageNamed:@"myloc_arr"] accuracyCirclePaint:accuracyCirclePaint iconFrame:45];    //get marker manager
     sailsMarkerManager = [sailsMapView getMarkerManager];
     //get pin marker manager
     sailsPinMarkerManager = [sailsMapView getPinMarkerManager];
@@ -121,8 +121,8 @@ typedef NS_ENUM(NSInteger, UIActionSheetMode) {
     __weak SailsLocationMapView *weakSailsMapView = sailsMapView;
     __weak MapViewController *weakSelf = self;
     
-    [sails loadCloudBuilding:@"e80fb977d5774a8b972c8e3f56b6b38d"
-                  buildingID:@"57f73cfc08920f6b4b000639"
+    [sails loadCloudBuilding:@"81ffc8cb1ed9450fa7e4d3ed7917472e"
+                  buildingID:@"59a537aa196c4ab1830002c8"
                      success:^(void){
                          floorNameList = [sails getFloorNameList];
                          [weakSailsMapView loadFloorMap:[floorNameList firstObject]];
@@ -512,6 +512,7 @@ typedef NS_ENUM(NSInteger, UIActionSheetMode) {
             [self animateFunctionViewHorizontal:naviView Hidden:true];
         }
         [sails startLocatingEngine];
+//        [sails setMode:WITH_GPS];
         [sailsMapView setLocatorMarkerVisible:true];
         [sailsMapView setMapControlMode:LocationCenterLockMode | FollowPhoneHeagingMode];
         lockCenterButton.hidden = false;
